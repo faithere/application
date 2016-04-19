@@ -1,4 +1,4 @@
-all:start_proc
+all:system_test
 
 clean:
 	rm *.o
