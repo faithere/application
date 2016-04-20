@@ -1,0 +1,3 @@
+all:ctrl
+clean:
+	rm *.*~

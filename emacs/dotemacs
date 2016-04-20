@@ -12,6 +12,11 @@
 ;(color-theme-dark-blue)
 (color-theme-gnome2)
 
+(display-time)
+
+;highlight zone to copy
+(transient-mark-mode t)
+
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d"))  
 ;----------------------------------------------------  
 ;;;;;一般总体设置  
