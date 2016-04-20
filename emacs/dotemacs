@@ -1,11 +1,16 @@
 ;max window
 (add-to-list 'load-path"~/.emacs.d")
 (require 'maxwindow)
-;(provide 'maxwindow)
+
+;line number
+(set-scroll-bar-mode nil)   ; no scroll bar, even in x-window system (recommended)
+(require 'wb-line-number)
+(wb-line-number-toggle)
 
 ;color theme
-;(load-file"~/.emacs.d/olor-theme.el")
-;(color-theme-gnome2)
+(require 'color-theme)
+;(color-theme-dark-blue)
+(color-theme-gnome2)
 
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d"))  
 ;----------------------------------------------------  
