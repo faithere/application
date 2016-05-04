@@ -51,7 +51,15 @@ int main(void)
   
   while(strncmp("End",work_area,3)!=0)
     {
-      fgets(work_area,MAX_SIZE,stdin);
+      if (strncmp(work_area,"FAST",4)==0)
+	{
+	  sem_post(&bin_sem);
+	  strcpy(work_area,"Wheee***");
+	}
+      else
+	{
+	  fgets(work_area,MAX_SIZE,stdin);
+	}
       sem_post(&bin_sem);
     }
 
