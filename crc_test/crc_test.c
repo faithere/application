@@ -184,13 +184,13 @@ USHORT SAMO_EncodeDataCRC16( UCHAR *buf, UCHAR dataLen)
 int main(void)
 {
   USHORT crc_result,crc_result_t;
-  UCHAR test_data[1]={0x01};
+  UCHAR test_data[2]={0x01,0x02};
   USHORT crc_result_shift;
   USHORT crc_result_table;
-  crc_result_t=usMBCRC16(test_data,1);
+  crc_result_t=usMBCRC16(test_data,2);
   //  crc_result_shift=usMBCRC16Shift(test_data,4);
   //  crc_result_table=crc_ccitt(test_data,4);
-  crc_result=SAMO_EncodeDataCRC16(test_data,1);
+  crc_result=SAMO_EncodeDataCRC16(test_data,2);
   
   printf("crc_result=0x%x\n",crc_result);
   printf("crc_result_shift=0x%x\n",crc_result_t);
