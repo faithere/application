@@ -12,10 +12,17 @@
 ;(color-theme-dark-blue)
 (color-theme-gnome2)
 
+;show time
 (display-time)
 
 ;highlight zone to copy
 (transient-mark-mode t)
+
+;beauty tool bar
+(tool-bar-mode -1)
+
+;support copy outside
+(setq x-select-enable-clipboard t)
 
 ;(add-to-list 'load-path (expand-file-name "~/.emacs.d"))  
 ;----------------------------------------------------  
