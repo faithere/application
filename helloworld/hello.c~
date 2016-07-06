@@ -16,6 +16,6 @@ int main(void)
   printf("strlen of p=%d  sizeof of p=%d sizof of test=%d strlen of test=%d\n",strlen(p),sizeof(p),sizeof(test),strlen(test));
 
   printf("data start:\n");
-  printf("a_first_byte=0x%x\n",*((char *)(&a)+1));
+  printf("a_first_byte=0x%x\n",*((char *)(&a)));
   return 0;
 }
