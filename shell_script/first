@@ -1,0 +1,12 @@
+#!/bin/sh
+#first shell script, just for fun
+
+echo "Please input some words"
+
+read var1
+
+echo "I guess you input those word:"
+
+echo $var1
+
+exit 0
