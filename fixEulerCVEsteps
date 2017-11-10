@@ -1,0 +1,13 @@
+[zwang6@pek-lpd-huawei ~]$ rpmbuild -bs ~/rpmbuild/SPECS/kernel.spec 
+[zwang6@pek-lpd-huawei ~]$ ln -s wrll-ccm-huawei-euler/Packages/kernel/ rpmbuild
+[zwang6@pek-lpd-huawei ~]$ rpmbuild -bp rpmbuild/SPECS/kernel.spec 
+[zwang6@pek-lpd-huawei ~]$ ls rpmbuild/
+BUILD  BUILDROOT  RPMS  SOURCES  SPECS  SRPMS
+[zwang6@pek-lpd-huawei rpmbuild]$ git status
+[zwang6@pek-lpd-huawei rpmbuild]$ git log -2
+
+Next, do action to fix the CVE bug, and format patch.
+1.add patch file to SOURCE
+2.add edit to SPEC file for the new patch 
+
+Be awared to focus on PATH in the patch file, the PATH must contail Package~~~

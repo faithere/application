@@ -1,0 +1,221 @@
+[zwang6@pek-lpd-huawei Euler]$ ls
+Euler2.qcow2  run_euler.sh
+[zwang6@pek-lpd-huawei Euler]$ ssh -p 10060 nuser@localhost
+
+Authorized users only. All activities may be monitored and reported.
+nuser@localhost's password: 
+Last login: Tue Sep 26 17:00:42 2017 from gateway
+
+Authorized users only. All activities may be monitored and reported.
+[nuser@euler2 ~]$ ls
+[nuser@euler2 ~]$ cd /boot/
+[nuser@euler2 boot]$ ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[nuser@euler2 boot]$ cd
+[nuser@euler2 ~]$ ls
+kernel-3.10.0-327.44.58.35.x86_64.rpm
+[nuser@euler2 ~]$ rpm -ivh kernel-3.10.0-327.44.58.35.x86_64.rpm
+error: can't create transaction lock on /var/lib/rpm/.rpm.lock (Permission denied)
+[nuser@euler2 ~]$ sudo rpm -ivh kernel-3.10.0-327.44.58.35.x86_64.rpm
+Preparing...                          ################################# [100%]
+	package kernel-3.10.0-327.53.58.73.h2.x86_64 (which is newer than kernel-3.10.0-327.44.58.35.x86_64) is already installed
+	package kernel-3.10.0-327.58.59.16.h14.x86_64 (which is newer than kernel-3.10.0-327.44.58.35.x86_64) is already installed
+[nuser@euler2 ~]$ cd /boot/
+[nuser@euler2 boot]$ ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[nuser@euler2 boot]$ cd grub2/
+-bash: cd: grub2/: Permission denied
+[nuser@euler2 boot]$ sudo grub2
+sudo: grub2: command not found
+[nuser@euler2 boot]$ sudo cd grub2/
+[nuser@euler2 boot]$ ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[nuser@euler2 boot]$ ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[nuser@euler2 boot]$ cd grub2
+-bash: cd: grub2: Permission denied
+[nuser@euler2 boot]$ su root
+Password: 
+[root@euler2 boot]# ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[root@euler2 boot]# cd grub
+[root@euler2 grub]# ls
+splash.xpm.gz
+[root@euler2 grub]# cd ..
+[root@euler2 boot]# ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[root@euler2 boot]# cd grub2/
+[root@euler2 grub2]# ls
+device.map  fonts  grub.cfg  grubenv  i386-pc  locale  themes
+[root@euler2 grub2]# vim grub.cfg 
+[root@euler2 grub2]# cd ..
+[root@euler2 boot]# ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[root@euler2 boot]# cd mv vmlinuz-3.10.0-327.53.58.73.h2.x86_64 ^C
+[root@euler2 boot]# mv vmlinuz-3.10.0-327.53.58.73.h2.x86_64 vmlinuz-3.10.0-327.53.58.73.h2.x86_64.bakeup
+[root@euler2 boot]# mv vmlinuz-3.10.0-327.58.59.16.h14.x86_64 vmlinuz-3.10.0-327.58.59.16.h14.x86_64.backup
+[root@euler2 boot]# ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64.bakeup
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64.backup
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[root@euler2 boot]# cd
+[root@euler2 ~]# ls
+anaconda-ks.cfg
+[root@euler2 ~]# cd /home/
+[root@euler2 home]# ls
+lost+found  nuser
+[root@euler2 home]# numfmt 
+^C
+[root@euler2 home]# cd nuser/
+[root@euler2 nuser]# ls
+kernel-3.10.0-327.44.58.35.x86_64.rpm
+[root@euler2 nuser]# rpm -ivh kernel-3.10.0-327.44.58.35.x86_64.rpm 
+Preparing...                          ################################# [100%]
+	package kernel-3.10.0-327.53.58.73.h2.x86_64 (which is newer than kernel-3.10.0-327.44.58.35.x86_64) is already installed
+	package kernel-3.10.0-327.58.59.16.h14.x86_64 (which is newer than kernel-3.10.0-327.44.58.35.x86_64) is already installed
+[root@euler2 nuser]# ls
+kernel-3.10.0-327.44.58.35.x86_64.rpm
+[root@euler2 nuser]# cd
+[root@euler2 ~]# ls
+anaconda-ks.cfg
+[root@euler2 ~]# cd /boot/
+[root@euler2 boot]# ls
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       tboot.gz
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot-syms
+grub                                                     lost+found                                         vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+grub2                                                    symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.53.58.73.h2.x86_64.bakeup
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.58.59.16.h14.x86_64.backup
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img         System.map-3.10.0-327.58.59.16.h14.x86_64
+[root@euler2 boot]# cd grub2/
+[root@euler2 grub2]# ls
+device.map  fonts  grub.cfg  grubenv  i386-pc  locale  themes
+[root@euler2 grub2]# vim grub.cfg 
+[root@euler2 grub2]# cp grub.cfg grub.cfg.bake
+[root@euler2 grub2]# vim grub.cfg
+[root@euler2 grub2]# cd
+[root@euler2 ~]# ls
+anaconda-ks.cfg
+[root@euler2 ~]# cd /home/
+[root@euler2 home]# ls
+lost+found  nuser
+[root@euler2 home]# cd nuser/
+[root@euler2 nuser]# ls
+kernel-3.10.0-327.44.58.35.x86_64.rpm
+[root@euler2 nuser]# rpm -ivh kernel-3.10.0-327.44.58.35.x86_64.rpm 
+Preparing...                          ################################# [100%]
+	package kernel-3.10.0-327.53.58.73.h2.x86_64 (which is newer than kernel-3.10.0-327.44.58.35.x86_64) is already installed
+	package kernel-3.10.0-327.58.59.16.h14.x86_64 (which is newer than kernel-3.10.0-327.44.58.35.x86_64) is already installed
+[root@euler2 nuser]# rpm -ivh kernel-3.10.0-327.44.58.35.x86_64.rpm --force
+Preparing...                          ################################# [100%]
+Updating / installing...
+   1:kernel-3.10.0-327.44.58.35       ################################# [100%]
+
+[root@euler2 nuser]# 
+[root@euler2 nuser]# cd /boot/
+[root@euler2 boot]# ls
+config-3.10.0-327.44.58.35.x86_64                        initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img   System.map-3.10.0-327.53.58.73.h2.x86_64
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       System.map-3.10.0-327.58.59.16.h14.x86_64
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot.gz
+grub                                                     lost+found                                         tboot-syms
+grub2                                                    symvers-3.10.0-327.44.58.35.x86_64.gz              vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.44.58.35.x86_64
+initramfs-3.10.0-327.44.58.35.x86_64.img                 symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.53.58.73.h2.x86_64.bakeup
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.44.58.35.x86_64              vmlinuz-3.10.0-327.58.59.16.h14.x86_64.backup
+[root@euler2 boot]# mv vmlinuz-3.10.0-327.53.58.73.h2.x86_64.bakeup vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+[root@euler2 boot]# mv vmlinuz-3.10.0-327.58.59.16.h14.x86_64.backup vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+[root@euler2 boot]# ls
+config-3.10.0-327.44.58.35.x86_64                        initramfs-3.10.0-327.53.58.73.h2.x86_64kdump.img   System.map-3.10.0-327.53.58.73.h2.x86_64
+config-3.10.0-327.53.58.73.h2.x86_64                     initramfs-3.10.0-327.58.59.16.h14.x86_64.img       System.map-3.10.0-327.58.59.16.h14.x86_64
+config-3.10.0-327.58.59.16.h14.x86_64                    initramfs-3.10.0-327.58.59.16.h14.x86_64kdump.img  tboot.gz
+grub                                                     lost+found                                         tboot-syms
+grub2                                                    symvers-3.10.0-327.44.58.35.x86_64.gz              vmlinuz-0-rescue-4a68c59117d54720b41682d476e7303c
+initramfs-0-rescue-4a68c59117d54720b41682d476e7303c.img  symvers-3.10.0-327.53.58.73.h2.x86_64.gz           vmlinuz-3.10.0-327.44.58.35.x86_64
+initramfs-3.10.0-327.44.58.35.x86_64.img                 symvers-3.10.0-327.58.59.16.h14.x86_64.gz          vmlinuz-3.10.0-327.53.58.73.h2.x86_64
+initramfs-3.10.0-327.53.58.73.h2.x86_64.img              System.map-3.10.0-327.44.58.35.x86_64              vmlinuz-3.10.0-327.58.59.16.h14.x86_64
+[root@euler2 boot]# cd grub2/
+[root@euler2 grub2]# ls
+device.map  fonts  grub.cfg  grub.cfg.bake  grubenv  i386-pc  locale  themes
+[root@euler2 grub2]# rm -rf grub.cfg
+[root@euler2 grub2]# mv grub.cfg.bake grub.cfg
+[root@euler2 grub2]# vim grub.cfg 
+
+[1]+  Stopped                 vim grub.cfg
+[root@euler2 grub2]# fg
+vim grub.cfg
+
+[1]+  Stopped                 vim grub.cfg
+[root@euler2 grub2]# fg
+vim grub.cfg
+[root@euler2 grub2]# reboot
+Connection to localhost closed by remote host.
+Connection to localhost closed.
+[zwang6@pek-lpd-huawei Euler]$ ssh -p 10060 nuser@localhost
+
+Authorized users only. All activities may be monitored and reported.
+nuser@localhost's password: 
+Permission denied, please try again.
+nuser@localhost's password: 
+Last failed login: Tue Nov  7 04:05:08 EST 2017 from gateway on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Tue Nov  7 03:44:53 2017 from gateway
+
+Authorized users only. All activities may be monitored and reported.
+[nuser@euler2 ~]$ ls
+kernel-3.10.0-327.44.58.35.x86_64.rpm
+[nuser@euler2 ~]$ uname -r
+3.10.0-327.44.58.35.x86_64
+[nuser@euler2 ~]$ pwd
+/home/nuser
+[nuser@euler2 ~]$ ls
+kernel-3.10.0-327.44.58.35.x86_64.rpm
+[nuser@euler2 ~]$ Connection to localhost closed by remote host.
+Connection to localhost closed.
+[zwang6@pek-lpd-huawei Euler]$ 
+
