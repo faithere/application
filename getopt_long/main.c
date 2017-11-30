@@ -38,6 +38,8 @@ int main(int argc, char** argv)
                 printf("c is %d\n",c);    
             break;    
         }    
-    }    
+    }
+    printf("value of optind is %d\n",optind);
+
     return 0;    
 }    
