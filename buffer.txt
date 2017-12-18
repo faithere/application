@@ -2,6 +2,8 @@ https://www.geospatialworld.net/article/integrating-gis-erp-and-scada-at-alliand
 
 http://cloud.gisinc.com/enterpriseintegration/
 
+https://www.freese.com/resource/integrating-scada-and-hydraulic-model-display-system-pressures-gis
+
 
 
 
